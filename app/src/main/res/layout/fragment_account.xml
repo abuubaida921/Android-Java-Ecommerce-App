@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.AccountFragment"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/margin_60"
+            android:layout_marginStart="@dimen/margin_20"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/location"
+                android:layout_marginTop="@dimen/margin_50"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/usr_pro_pic"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_user_default"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/usr_pro_pic"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical">
+                    <TextView
+                        android:text="Jhon Kurte"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/margin_20"/>
+                    <TextView
+                        android:text="jhonkurte@gmail.com"
+                        android:textColor="@color/ash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/margin_15"/>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/ash_light"/>
+
+            <RelativeLayout
+                android:id="@+id/showOrders"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_orders"/>
+
+                <TextView
+                    android:layout_marginStart="@dimen/margin_30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gilroy_medium"
+                    android:text="My Orders"
+                    android:textColor="@color/ash"
+                    android:textSize="@dimen/cardview_title_txt" />
+
+                <LinearLayout
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_forwad_arrow"
+                        android:layout_marginStart="@dimen/margin_20"/>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/ash_light"/>
+
+            <RelativeLayout
+                android:id="@+id/changePass"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_lock"/>
+
+                <TextView
+                    android:layout_marginStart="@dimen/margin_30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gilroy_medium"
+                    android:text="Change Password"
+                    android:textColor="@color/ash"
+                    android:textSize="@dimen/cardview_title_txt" />
+
+                <LinearLayout
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_forwad_arrow"
+                        android:layout_marginStart="@dimen/margin_20"/>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/ash_light"/>
+
+            <RelativeLayout
+                android:id="@+id/showDeliveryAddress"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_location_outer"/>
+
+                <TextView
+                    android:layout_marginStart="@dimen/margin_30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gilroy_medium"
+                    android:text="Delivery Address"
+                    android:textColor="@color/ash"
+                    android:textSize="@dimen/cardview_title_txt" />
+
+                <LinearLayout
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_forwad_arrow"
+                        android:layout_marginStart="@dimen/margin_20"/>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/ash_light"/>
+
+            <RelativeLayout
+                android:id="@+id/showPaymentMethod"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_card"/>
+
+                <TextView
+                    android:layout_marginStart="@dimen/margin_30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gilroy_medium"
+                    android:text="Payment History"
+                    android:textColor="@color/ash"
+                    android:textSize="@dimen/cardview_title_txt" />
+
+                <LinearLayout
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_forwad_arrow"
+                        android:layout_marginStart="@dimen/margin_20"/>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/ash_light"/>
+
+            <RelativeLayout
+                android:id="@+id/showPromoCode"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_promo_code"/>
+
+                <TextView
+                    android:layout_marginStart="@dimen/margin_30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gilroy_medium"
+                    android:text="Promo Code"
+                    android:textColor="@color/ash"
+                    android:textSize="@dimen/cardview_title_txt" />
+
+                <LinearLayout
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_forwad_arrow"
+                        android:layout_marginStart="@dimen/margin_20"/>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/ash_light"/>
+
+            <RelativeLayout
+                android:id="@+id/showFaq"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_help"/>
+
+                <TextView
+                    android:layout_marginStart="@dimen/margin_30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gilroy_medium"
+                    android:text="Faq"
+                    android:textColor="@color/ash"
+                    android:textSize="@dimen/cardview_title_txt" />
+
+                <LinearLayout
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_forwad_arrow"
+                        android:layout_marginStart="@dimen/margin_20"/>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/ash_light"/>
+
+            <RelativeLayout
+                android:id="@+id/showAboutUs"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_about"/>
+
+                <TextView
+                    android:layout_marginStart="@dimen/margin_30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gilroy_medium"
+                    android:text="About"
+                    android:textColor="@color/ash"
+                    android:textSize="@dimen/cardview_title_txt" />
+
+                <LinearLayout
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_forwad_arrow"
+                        android:layout_marginStart="@dimen/margin_20"/>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/ash_light"/>
+
+            <Button
+                android:id="@+id/logout_btn"
+                android:layout_below="@id/second_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginStart="@dimen/margin_20"
+                android:layout_marginEnd="@dimen/margin_20"
+                android:background="@drawable/round_button"
+                android:text="Logout"
+                android:textSize="@dimen/btn_txt"
+                android:textColor="@color/white"
+                android:textAllCaps="false"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

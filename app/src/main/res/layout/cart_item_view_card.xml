@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        card_view:cardCornerRadius="@dimen/margin_15"
+        card_view:cardElevation="2dp"
+        card_view:cardMaxElevation="0dp"
+        card_view:contentPadding="0dp"
+        android:layout_margin="@dimen/margin_5">
+
+        <RelativeLayout
+            android:id="@+id/relative_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:padding="@dimen/margin_10"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/item_img"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true" />
+
+            <LinearLayout
+                android:layout_toEndOf="@+id/item_img"
+                android:layout_marginStart="@dimen/margin_20"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_alignParentStart="true"
+                        android:layout_centerInParent="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txt_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/gilroy_semibold"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/black"
+                            android:maxLines="1"
+                            android:textSize="@dimen/btn_txt" />
+                        <TextView
+                            android:id="@+id/txt_unit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/gilroy_medium"
+                            android:textAlignment="center"
+                            android:textColor="@color/ash"
+                            android:maxLines="1" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/remove"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/baseline_close_24" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_alignParentStart="true"
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/margin_40">
+
+                        <ImageView
+                            android:id="@+id/reduce"
+                            android:layout_gravity="center"
+                            android:layout_width="@dimen/margin_25"
+                            android:layout_height="@dimen/margin_25"
+                            android:padding="@dimen/margin_5"
+                            android:src="@drawable/baseline_remove_24"
+                            android:background="@drawable/total_item_round_bg"/>
+
+                        <LinearLayout
+                            android:layout_marginStart="@dimen/margin_10"
+                            android:layout_marginEnd="@dimen/margin_10"
+                            android:padding="@dimen/margin_10"
+                            android:layout_gravity="center"
+                            android:layout_width="@dimen/margin_35"
+                            android:layout_height="@dimen/margin_35">
+
+                            <TextView
+                                android:id="@+id/singleItemSelectedUnit"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/gilroy_semibold"
+                                android:textAlignment="center"
+                                android:textColor="@color/ash"/>
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/increase"
+                            android:layout_gravity="center"
+                            android:layout_width="@dimen/margin_25"
+                            android:layout_height="@dimen/margin_25"
+                            android:padding="@dimen/margin_5"
+                            android:src="@drawable/baseline_add_24_ash"
+                            android:background="@drawable/total_item_round_bg"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txt_unit_total_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/gilroy_semibold"
+                        android:maxLines="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/btn_txt" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.ExploreFragment"
+    android:background="@color/white">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/location"
+                android:layout_marginTop="@dimen/margin_50"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <TextView
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:text="Find Products"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/margin_20"/>
+            </LinearLayout>
+
+                <LinearLayout
+                    android:layout_below="@+id/location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/search_layout"
+                        android:layout_below="@+id/location"
+                        android:layout_margin="@dimen/margin_20"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_50"
+                        android:background="@drawable/round_search_bg">
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/margin_15"
+                            android:layout_width="@dimen/margin_20"
+                            android:layout_height="@dimen/margin_20"
+                            android:src="@drawable/ic_search"/>
+                        <TextView
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/margin_10"
+                            android:backgroundTint="@color/ash_light"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Search Store"
+                            android:textSize="@dimen/margin_17"
+                            android:textColor="@color/ash"
+                            android:textColorHint="@color/ash"
+                            android:singleLine="true"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                    android:id="@+id/category_layout"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:layout_marginEnd="@dimen/margin_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ProgressBar
+                        android:id="@+id/category_progressBar"
+                        android:layout_gravity="center"
+                        android:layout_width="@dimen/margin_20"
+                        android:layout_height="@dimen/margin_20"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/category_recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                </LinearLayout>
+
+        </RelativeLayout>
+
+                </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.ShopFragment"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/icon"
+                android:src="@drawable/ic_icon_colored"
+                android:layout_marginTop="@dimen/margin_50"
+                android:layout_width="@dimen/margin_20"
+                android:layout_height="@dimen/margin_20"
+                android:layout_centerInParent="true"
+                android:layout_alignParentTop="true"/>
+            <LinearLayout
+                android:id="@+id/location"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_below="@+id/icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <ImageView
+                    android:src="@drawable/ic_location"
+                    android:layout_width="@dimen/margin_20"
+                    android:layout_height="@dimen/margin_20"/>
+                <TextView
+                    android:id="@+id/user_location"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/search_layout"
+                android:layout_below="@+id/location"
+                android:layout_margin="@dimen/margin_20"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_50"
+                android:background="@drawable/round_search_bg">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/margin_15"
+                    android:layout_width="@dimen/margin_20"
+                    android:layout_height="@dimen/margin_20"
+                    android:src="@drawable/ic_search"/>
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:backgroundTint="@color/ash_light"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Search Store"
+                    android:textSize="@dimen/margin_17"
+                    android:textColor="@color/ash"
+                    android:textColorHint="@color/ash"
+                    android:singleLine="true"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/exclusive_layout"
+                android:layout_below="@+id/search_layout"
+                android:layout_margin="@dimen/margin_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gilroy_semibold"
+                        android:text="Exclusive Offer"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/login_title" />
+
+                    <TextView
+                        android:id="@+id/exclusive_see_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/gilroy_semibold"
+                        android:text="See all"
+                        android:textColor="@color/purple_500"
+                        android:textSize="@dimen/onbording_sub_title" />
+                </RelativeLayout>
+
+                <ProgressBar
+                    android:id="@+id/exclusive_progressBar"
+                    android:layout_gravity="center"
+                    android:layout_width="@dimen/margin_20"
+                    android:layout_height="@dimen/margin_20"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/exclusive_recycler"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/best_selling_layout"
+                android:layout_below="@+id/exclusive_layout"
+                android:layout_margin="@dimen/margin_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gilroy_semibold"
+                        android:text="Best Selling"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/login_title" />
+
+                    <TextView
+                        android:id="@+id/best_selling_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/gilroy_semibold"
+                        android:text="See all"
+                        android:textColor="@color/purple_500"
+                        android:textSize="@dimen/onbording_sub_title" />
+                </RelativeLayout>
+
+                <ProgressBar
+                    android:id="@+id/best_selling_progressBar"
+                    android:layout_gravity="center"
+                    android:layout_width="@dimen/margin_20"
+                    android:layout_height="@dimen/margin_20"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/best_selling_recycler"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

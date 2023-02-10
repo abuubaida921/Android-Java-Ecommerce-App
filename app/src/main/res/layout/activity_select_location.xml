@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.SelectLocationActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_alignParentTop="true"
+            android:gravity="center_horizontal"
+            android:background="@drawable/img_header_bg_blured"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_marginTop="@dimen/margin_50"
+                android:layout_width="@dimen/margin_120"
+                android:layout_height="@dimen/margin_120"
+                android:src="@drawable/ic_location_select"/>
+        </LinearLayout>
+
+<!--        <LinearLayout-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:background="@drawable/img_footer_bg_blured"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+
+<!--        </LinearLayout>-->
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="30dp">
+
+                <LinearLayout
+                    android:id="@+id/first_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_30"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:textAlignment="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_140"
+                        android:text="Select Your Location"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/gilroy_semibold"
+                        android:textSize="@dimen/onbording_title" />
+
+                    <TextView
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:textAlignment="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gilroy_medium"
+                        android:textSize="@dimen/onbording_sub_title"
+                        android:textColor="@color/ash"
+                        android:text="Switch on your location to stay in tune with what’s happening in your area" />
+
+                    <TextView
+                        android:layout_marginTop="@dimen/margin_50"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gilroy_semibold"
+                        android:textSize="@dimen/onbording_sub_title"
+                        android:textColor="@color/ash"
+                        android:text="Your Zone" />
+
+                    <Spinner
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:id="@+id/user_zone"
+                        android:textColor="@color/black"
+                        android:backgroundTint="@color/black"
+                        android:fontFamily="@font/gilroy_medium"
+                        android:textSize="@dimen/margin_15"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:layout_marginTop="@dimen/margin_30"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gilroy_semibold"
+                        android:textSize="@dimen/onbording_sub_title"
+                        android:text="Your Area"
+                        android:textColor="@color/ash"/>
+
+                    <Spinner
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:id="@+id/user_area"
+                        android:textColor="@color/black"
+                        android:backgroundTint="@color/black"
+                        android:fontFamily="@font/gilroy_medium"
+                        android:textSize="@dimen/margin_15"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/location_submit_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:layout_marginStart="@dimen/margin_20"
+                    android:layout_marginEnd="@dimen/margin_20"
+                    android:background="@drawable/round_button"
+                    android:text="Submit"
+                    android:textSize="@dimen/btn_txt"
+                    android:textColor="@color/white"
+                    android:textAllCaps="false"/>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

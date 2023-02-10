@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_5">5sp</dimen>
+    <dimen name="margin_10">10sp</dimen>
+    <dimen name="margin_15">15sp</dimen>
+    <dimen name="margin_17">17sp</dimen>
+    <dimen name="margin_20">20sp</dimen>
+    <dimen name="margin_25">25sp</dimen>
+    <dimen name="margin_30">30sp</dimen>
+    <dimen name="margin_35">35sp</dimen>
+    <dimen name="margin_40">40sp</dimen>
+    <dimen name="margin_45">45sp</dimen>
+    <dimen name="margin_50">50sp</dimen>
+    <dimen name="margin_60">60sp</dimen>
+    <dimen name="margin_70">70sp</dimen>
+    <dimen name="margin_80">80sp</dimen>
+    <dimen name="margin_100">100sp</dimen>
+    <dimen name="margin_120">120sp</dimen>
+    <dimen name="margin_130">130sp</dimen>
+    <dimen name="margin_135">135sp</dimen>
+    <dimen name="margin_140">140sp</dimen>
+    <dimen name="margin_150">150sp</dimen>
+    <dimen name="margin_160">160sp</dimen>
+    <dimen name="margin_170">170sp</dimen>
+    <dimen name="margin_180">180sp</dimen>
+    <dimen name="login_title">22sp</dimen>
+    <dimen name="onbording_title">40sp</dimen>
+    <dimen name="onbording_sub_title">14sp</dimen>
+    <dimen name="btn_txt">16sp</dimen>
+    <dimen name="cardview_title_txt">14sp</dimen>
+    <dimen name="cardview_unit_txt">11sp</dimen>
+    <dimen name="cardview_unit_price_txt">12sp</dimen>
+</resources>

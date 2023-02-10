@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.RegisterActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_alignParentTop="true"
+            android:gravity="center_horizontal"
+            android:background="@drawable/img_header_bg_blured"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_marginTop="@dimen/margin_50"
+                android:layout_width="@dimen/margin_70"
+                android:layout_height="@dimen/margin_70"
+                android:src="@drawable/ic_icon_colored"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/img_footer_bg_blured"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="30dp">
+
+                <LinearLayout
+                    android:id="@+id/first_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_30"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_140"
+                        android:text="Sign Up"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/gilroy_semibold"
+                        android:textSize="@dimen/login_title" />
+
+                    <TextView
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gilroy_medium"
+                        android:textSize="@dimen/onbording_sub_title"
+                        android:textColor="@color/ash"
+                        android:text="Enter your credentials to continue" />
+
+                    <TextView
+                        android:layout_marginTop="@dimen/margin_30"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gilroy_semibold"
+                        android:textSize="@dimen/onbording_sub_title"
+                        android:textColor="@color/ash"
+                        android:text="Full Name" />
+
+                    <EditText
+                        android:id="@+id/full_name"
+                        android:textColor="@color/black"
+                        android:backgroundTint="@color/black"
+                        android:fontFamily="@font/gilroy_medium"
+                        android:textSize="@dimen/margin_15"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:layout_marginTop="@dimen/margin_30"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gilroy_semibold"
+                        android:textSize="@dimen/onbording_sub_title"
+                        android:text="Email"
+                        android:textColor="@color/ash"/>
+
+                    <EditText
+                        android:id="@+id/usr_email"
+                        android:textColor="@color/black"
+                        android:backgroundTint="@color/black"
+                        android:fontFamily="@font/gilroy_medium"
+                        android:textSize="@dimen/margin_15"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:layout_marginTop="@dimen/margin_30"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gilroy_semibold"
+                        android:textSize="@dimen/onbording_sub_title"
+                        android:text="Password"
+                        android:textColor="@color/ash" />
+
+                    <EditText
+                        android:id="@+id/usr_pass"
+                        android:textColor="@color/black"
+                        android:backgroundTint="@color/black"
+                        android:inputType="textPassword"
+                        app:passwordToggleEnabled="true"
+                        android:fontFamily="@font/gilroy_medium"
+                        android:textSize="@dimen/margin_15"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/second_layout"
+                    android:layout_below="@id/first_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gilroy_semibold"
+                        android:textSize="@dimen/cardview_unit_price_txt"
+                        android:textColor="@color/ash"
+                        android:text="By continuing you agree to our" />
+
+                    <TextView
+                        android:id="@+id/privacy_policy"
+                        android:layout_marginStart="@dimen/margin_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gilroy_semibold"
+                        android:textSize="@dimen/cardview_unit_price_txt"
+                        android:text="Privacy Policy"
+                        android:textColor="@color/purple_500"/>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/signUp_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:layout_marginStart="@dimen/margin_20"
+                    android:layout_marginEnd="@dimen/margin_20"
+                    android:background="@drawable/round_button"
+                    android:text="Sign Up"
+                    android:textSize="@dimen/btn_txt"
+                    android:textColor="@color/white"
+                    android:textAllCaps="false"/>
+
+                <LinearLayout
+                    android:id="@+id/fourth_layout"
+                    android:layout_below="@id/login_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_30"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gilroy_semibold"
+                        android:textSize="@dimen/cardview_unit_price_txt"
+                        android:textColor="@color/ash"
+                        android:text="Already have an account?" />
+
+                    <TextView
+                        android:layout_marginStart="@dimen/margin_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gilroy_semibold"
+                        android:textSize="@dimen/cardview_unit_price_txt"
+                        android:text="Log In"
+                        android:textColor="@color/purple_500"
+                        android:onClick="logIn"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

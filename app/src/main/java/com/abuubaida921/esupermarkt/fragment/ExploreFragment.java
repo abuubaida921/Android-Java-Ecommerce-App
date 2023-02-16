@@ -1,5 +1,6 @@
 package com.abuubaida921.esupermarkt.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -11,9 +12,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 
 import com.abuubaida921.esupermarkt.R;
+import com.abuubaida921.esupermarkt.activity.SearchActivity;
 import com.abuubaida921.esupermarkt.adapter.CategoryItemAdapter;
 import com.abuubaida921.esupermarkt.adapter.ExclusiveOfferItemAdapter;
 import com.abuubaida921.esupermarkt.model.CategoryItemModel;
@@ -26,12 +29,15 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
+import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
+
 public class ExploreFragment extends Fragment {
 
     RecyclerView category_recycler;
     ProgressBar category_progressBar;
     ArrayList<CategoryItemModel> categoryList = new ArrayList<>();
     CategoryItemAdapter categoryItemAdapter;
+    LinearLayout search_layout;
 
     public ExploreFragment() {
         // Required empty public constructor
@@ -46,11 +52,21 @@ public class ExploreFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view =  inflater.inflate(R.layout.fragment_explore, container, false);
+        View view = inflater.inflate(R.layout.fragment_explore, container, false);
+        search_layout = view.findViewById(R.id.search_layout);
         category_progressBar = view.findViewById(R.id.category_progressBar);
         category_recycler = view.findViewById(R.id.category_recycler);
         category_recycler.setHasFixedSize(true);
-        category_recycler.setLayoutManager(new GridLayoutManager(getActivity(),2));
+        category_recycler.setLayoutManager(new GridLayoutManager(getActivity(), 2));
+        search_layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), SearchActivity.class);
+                intent.addFlags(FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+            }
+        });
+
         readCategoryItem();
         return view;
     }

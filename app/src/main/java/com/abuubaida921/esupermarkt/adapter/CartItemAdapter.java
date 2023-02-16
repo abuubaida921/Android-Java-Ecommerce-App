@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -66,10 +67,10 @@ public class CartItemAdapter extends RecyclerView.Adapter<CartItemAdapter.viewHo
                 ExclusiveOfferItemModel exclusiveOfferItemModel = snapshot.getValue(ExclusiveOfferItemModel.class);
                 viewHolder.item_name.setText(exclusiveOfferItemModel.getName());
                 viewHolder.txt_unit.setText(exclusiveOfferItemModel.getUnit());
-                if (arrayList.get(viewHolder.getAdapterPosition()).getAdded_unit() == 1) {
-                    viewHolder.reduce.setVisibility(View.GONE);
-                } else {
+                if (arrayList.get(viewHolder.getAdapterPosition()).getAdded_unit() > 1) {
                     viewHolder.reduce.setVisibility(View.VISIBLE);
+                } else {
+                    viewHolder.reduce.setVisibility(View.GONE);
                 }
                 viewHolder.singleItemSelectedUnit.setText("" + arrayList.get(viewHolder.getAdapterPosition()).getAdded_unit());
                 double total_price = arrayList.get(viewHolder.getAdapterPosition()).getAdded_unit() * Double.parseDouble(exclusiveOfferItemModel.getUnit_price());
@@ -95,16 +96,20 @@ public class CartItemAdapter extends RecyclerView.Adapter<CartItemAdapter.viewHo
                     @Override
                     public void onClick(View v) {
                         viewHolder.reduce.setVisibility(View.GONE);
+                        viewHolder.progress_reduce.setVisibility(View.VISIBLE);
                         HashMap<String, Object> map = new HashMap<>();
                         map.put("added_unit", arrayList.get(viewHolder.getAdapterPosition()).getAdded_unit() - 1);
                         map.put("unit_price", Double.parseDouble(exclusiveOfferItemModel.getUnit_price()));
                         FirebaseDatabase.getInstance().getReference("cart").child(userID).child(arrayList.get(viewHolder.getAdapterPosition()).getProduct_id()).updateChildren(map).addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
-                                if (arrayList.get(viewHolder.getAdapterPosition()).getAdded_unit() > 1)
+                                if (arrayList.get(viewHolder.getAdapterPosition()).getAdded_unit() > 1) {
+                                    viewHolder.progress_reduce.setVisibility(View.GONE);
                                     viewHolder.reduce.setVisibility(View.VISIBLE);
-                                else
+                                } else {
                                     viewHolder.reduce.setVisibility(View.GONE);
+                                    viewHolder.progress_reduce.setVisibility(View.GONE);
+                                }
                             }
                         });
                     }
@@ -113,6 +118,7 @@ public class CartItemAdapter extends RecyclerView.Adapter<CartItemAdapter.viewHo
                     @Override
                     public void onClick(View v) {
                         viewHolder.increase.setVisibility(View.GONE);
+                        viewHolder.progress_increase.setVisibility(View.VISIBLE);
                         try {
                             HashMap<String, Object> map = new HashMap<>();
                             map.put("added_unit", arrayList.get(viewHolder.getAdapterPosition()).getAdded_unit() + 1);
@@ -121,6 +127,7 @@ public class CartItemAdapter extends RecyclerView.Adapter<CartItemAdapter.viewHo
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()) {
+                                        viewHolder.progress_increase.setVisibility(View.GONE);
                                         viewHolder.increase.setVisibility(View.VISIBLE);
                                     }
                                 }
@@ -172,9 +179,12 @@ public class CartItemAdapter extends RecyclerView.Adapter<CartItemAdapter.viewHo
         TextView item_name, txt_unit, singleItemSelectedUnit, txt_unit_total_price;
         ImageView item_image, reduce, increase, remove;
         RelativeLayout relative_layout;
+        ProgressBar progress_reduce, progress_increase;
 
         public viewHolder(View itemView) {
             super(itemView);
+            progress_reduce = itemView.findViewById(R.id.progress_reduce);
+            progress_increase = itemView.findViewById(R.id.progress_increase);
             reduce = itemView.findViewById(R.id.reduce);
             increase = itemView.findViewById(R.id.increase);
             remove = itemView.findViewById(R.id.remove);

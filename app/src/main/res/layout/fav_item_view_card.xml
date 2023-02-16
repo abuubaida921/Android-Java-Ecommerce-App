@@ -30,29 +30,32 @@
                 android:layout_centerInParent="true" />
 
             <LinearLayout
-                android:layout_toEndOf="@+id/item_img"
-                android:layout_marginStart="@dimen/margin_20"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/margin_20"
+                android:layout_toEndOf="@+id/item_img"
+                android:layout_toStartOf="@+id/end_lyt"
                 android:orientation="vertical">
+
                 <TextView
                     android:id="@+id/txt_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/gilroy_semibold"
+                    android:maxLines="1"
                     android:textAlignment="textStart"
                     android:textColor="@color/black"
-                    android:maxLines="1"
                     android:textSize="@dimen/btn_txt" />
+
                 <TextView
                     android:id="@+id/txt_unit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/gilroy_medium"
+                    android:maxLines="1"
                     android:textAlignment="center"
-                    android:textColor="@color/ash"
-                    android:maxLines="1" />
+                    android:textColor="@color/ash" />
 
             </LinearLayout>
 

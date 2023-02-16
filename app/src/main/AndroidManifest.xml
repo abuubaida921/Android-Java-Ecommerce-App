@@ -13,6 +13,9 @@
         android:theme="@style/Theme.ESupermarkt"
         tools:targetApi="31">
         <activity
+            android:name=".activity.SearchActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.ForgotPasswordActivity"
             android:exported="false" />
         <activity
@@ -20,8 +23,7 @@
             android:exported="false" />
         <activity
             android:name=".paymentgateway.StripePaymentActivity"
-            android:exported="false" />
-        <!-- <activity -->
+            android:exported="false" /> <!-- <activity -->
         <!-- android:name=".paymentgateway.PayPalPaymentActivity" -->
         <!-- android:exported="false" /> -->
         <activity
@@ -80,10 +82,6 @@
             android:name=".activity.MainActivity"
             android:exported="false" />
 
-        <meta-data
-            android:name="com.razorpay.ApiKey"
-            android:value="replace_with_your_key" />
-
         <activity
             android:name="com.razorpay.CheckoutActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
@@ -98,6 +96,10 @@
             </intent-filter>
         </activity>
 
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="replace_with_your_key" />
+
         <receiver
             android:name="com.razorpay.RzpTokenReceiver"
             android:exported="false">
@@ -106,8 +108,8 @@
             </intent-filter>
         </receiver>
     </application>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
     <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
 </manifest>

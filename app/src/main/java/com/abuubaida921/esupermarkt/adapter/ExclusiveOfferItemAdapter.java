@@ -79,6 +79,7 @@ public class ExclusiveOfferItemAdapter extends RecyclerView.Adapter<ExclusiveOff
                 Intent intent = new Intent(context, ProductViewActivity.class);
                 intent.putExtra("id", arrayList.get(viewHolder.getAdapterPosition()).getId());
 //                intent.addFlags(FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                intent.addFlags(FLAG_ACTIVITY_NEW_TASK );
                 context.startActivity(intent);
             }
         });

@@ -7,10 +7,6 @@
     tools:context=".activity.CategoryWiseProductViewActivity"
     android:background="@color/white">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -37,7 +33,6 @@
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:layout_marginStart="@dimen/margin_10"
-                    android:text="Fruits and Vegetables"
                     android:textColor="@color/black"
                     android:textSize="@dimen/margin_20" />
 
@@ -101,7 +96,5 @@
             </LinearLayout>
 
         </RelativeLayout>
-
-    </ScrollView>
 
 </RelativeLayout>
